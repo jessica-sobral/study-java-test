@@ -29,7 +29,7 @@ public class Rectangle {
         if(base > 0)
             this.base = base;
         else
-            throw new IllegalArgumentException("A base do triângulo deve ser maior que zero.");
+            throw new IllegalArgumentException("The base of the triangle must be greater than zero.");
     }
 
     public double getBase() {
@@ -40,7 +40,7 @@ public class Rectangle {
         if(height > 0)
             this.height = height;
         else
-            throw new IllegalArgumentException("A altura do triângulo deve ser maior que zero.");
+            throw new IllegalArgumentException("The height of the triangle must be greater than zero.");
     }
 
     public double getHeight() {
