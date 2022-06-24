@@ -14,14 +14,14 @@ public class App {
         System.out.println(new App().getGretting());
 
 //        Square s1 = new Square(5);
-//        System.out.println("Square 1\nSide: " + q1.getSide());
-//        System.out.println("Area: " + q1.calculateArea());
-//        System.out.println("Perimeter: " + q1.calculatePerimeter());
+//        System.out.println("Square 1\nSide: " + s1.getSide());
+//        System.out.println("Area: " + s1.calculateArea());
+//        System.out.println("Perimeter: " + s1.calculatePerimeter());
 
 //        Square s2 = new Square(10);
-//        System.out.println("\nSquare 2\nSide: " + q2.getSide());
-//        System.out.println("Area: " + q2.calculateArea());
-//        System.out.println("Perimeter: " + q2.calculatePerimeter());
+//        System.out.println("\nSquare 2\nSide: " + s2.getSide());
+//        System.out.println("Area: " + s2.calculateArea());
+//        System.out.println("Perimeter: " + s2.calculatePerimeter());
 
 //        Rectangle r1 = new Rectangle(5, 10);
 //        System.out.println("\nRectangle 1\nBase: " + r1.getBase());
