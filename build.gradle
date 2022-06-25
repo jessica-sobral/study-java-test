@@ -4,12 +4,13 @@ plugins {
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
     implementation 'com.google.guava:guava:31.1-jre'
-    testImplementation 'junit:junit:4.13.1'
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    testImplementation 'junit:junit:4.6'
 }
 
 mainClassName = 'demogradle.App'
