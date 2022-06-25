@@ -11,4 +11,12 @@ public class SquareTest {
         double doneResult = s1.calculateArea();
         assertEquals(expectedResult, doneResult, 0);
     }
+
+    @Test
+    public void testCalculatePerimeter() {
+        Square s1 = new Square(5);
+        double expectedResult = 4 * 5;
+        double doneResult = s1.calculatePerimeter();
+        assertEquals(expectedResult, doneResult, 0);
+    }
 }
