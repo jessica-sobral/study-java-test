@@ -35,13 +35,21 @@ public class RectangleTest {
     @Test
     public void testBaseEqualsZero() {
         Rectangle r1 = new Rectangle(5, 10);
-        assertThrows(IllegalArgumentException.class, () -> { r1.setBase(0); }, "IllegalArgumentException error was expected.");
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> { r1.setBase(0); },
+                "IllegalArgumentException error was expected."
+        );
     }
 
     @Test
     public void testBaseLessThanZero() {
         Rectangle r1 = new Rectangle(5, 10);
-        assertThrows(IllegalArgumentException.class, () -> { r1.setBase(-5); }, "IllegalArgumentException error was expected.");
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> { r1.setBase(-5); },
+                "IllegalArgumentException error was expected."
+        );
     }
 
     @Test
@@ -56,12 +64,20 @@ public class RectangleTest {
     @Test
     public void testHeightEqualsZero() {
         Rectangle r1 = new Rectangle(5);
-        assertThrows(IllegalArgumentException.class, () -> { r1.setHeight(0); }, "IllegalArgumentException error was expected.");
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> { r1.setHeight(0); },
+                "IllegalArgumentException error was expected."
+        );
     }
 
     @Test
     public void testHeightLessThanZero() {
         Rectangle r1 = new Rectangle(5);
-        assertThrows(IllegalArgumentException.class, () -> { r1.setHeight(-10); }, "IllegalArgumentException error was expected.");
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> { r1.setHeight(-10); },
+                "IllegalArgumentException error was expected."
+        );
     }
 }
