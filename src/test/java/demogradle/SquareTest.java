@@ -33,6 +33,12 @@ public class SquareTest {
     @Test
     public void testSideEqualsZero() {
         Square s1 = new Square();
-        assertThrows(IllegalArgumentException.class, () -> { s1.setSide(0); }, "The side of the square must be greater than zero.");
+        assertThrows(IllegalArgumentException.class, () -> { s1.setSide(0); }, "IllegalArgumentException error was expected.");
+    }
+
+    @Test
+    public void testSideLessThanZero() {
+        Square s1 = new Square();
+        assertThrows(IllegalArgumentException.class, () -> { s1.setSide(-5); }, "IllegalArgumentException error was expected.");
     }
 }
