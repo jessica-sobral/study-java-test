@@ -1,6 +1,7 @@
 package demogradle;
 
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.Test;
 
 public class SquareTest {
@@ -27,5 +28,11 @@ public class SquareTest {
         double expectedResult = 5;
         double doneResult = s1.getSide();
         assertEquals(expectedResult, doneResult, 0);
+    }
+
+    @Test
+    public void testSideEqualsZero() {
+        Square s1 = new Square();
+        assertThrows(IllegalArgumentException.class, () -> { s1.setSide(0); }, "The side of the square must be greater than zero.");
     }
 }
