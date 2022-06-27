@@ -19,4 +19,14 @@ public class RectangleTest {
         double doneResult = r1.calculatePerimeter();
         assertEquals(expectedResult, doneResult, 0);
     }
+
+    @Test
+    public void testBaseGreaterThanZero() {
+        Rectangle r1 = new Rectangle();
+        r1.setBase(5);
+        r1.setHeight(10);
+        double expectedResult = 5;
+        double doneResult = r1.getBase();
+        assertEquals(expectedResult, doneResult, 0);
+    }
 }
