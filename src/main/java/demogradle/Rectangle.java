@@ -13,8 +13,8 @@ public class Rectangle {
     }
 
     public Rectangle(double base, double height) {
-        this.base = base;
-        this.height = height;
+        this.setBase(base);
+        this.setHeight(height);
     }
 
     public double calculateArea() {
