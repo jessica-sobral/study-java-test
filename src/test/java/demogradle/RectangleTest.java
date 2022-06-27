@@ -58,4 +58,10 @@ public class RectangleTest {
         Rectangle r1 = new Rectangle(5);
         assertThrows(IllegalArgumentException.class, () -> { r1.setHeight(0); }, "IllegalArgumentException error was expected.");
     }
+
+    @Test
+    public void testHeightLessThanZero() {
+        Rectangle r1 = new Rectangle(5);
+        assertThrows(IllegalArgumentException.class, () -> { r1.setHeight(-10); }, "IllegalArgumentException error was expected.");
+    }
 }
