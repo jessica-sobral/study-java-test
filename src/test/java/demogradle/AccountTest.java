@@ -34,4 +34,13 @@ public class AccountTest {
                 "IllegalArgumentException error was expected."
         );
     }
+
+    @Test
+    public void testLimitGreaterThanZero() {
+        Account a1 = new Account(1, 100);
+        a1.setLimit(150);
+        double expectedResult = 150;
+        double doneResult = a1.getLimit();
+        assertEquals(expectedResult, doneResult, 0);
+    }
 }
