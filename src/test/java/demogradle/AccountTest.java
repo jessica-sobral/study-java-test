@@ -43,4 +43,14 @@ public class AccountTest {
         double doneResult = a1.getLimit();
         assertEquals(expectedResult, doneResult, 0);
     }
+
+    @Test
+    public void testLimitEqualsZero() {
+        Account a1 = new Account(1, 150);
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> { a1.setLimit(0); },
+                "IllegalArgumentException error was expected."
+        );
+    }
 }
