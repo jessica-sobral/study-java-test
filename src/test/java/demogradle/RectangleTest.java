@@ -52,4 +52,10 @@ public class RectangleTest {
         double doneResult = r1.getHeight();
         assertEquals(expectedResult, doneResult, 0);
     }
+
+    @Test
+    public void testHeightEqualsZero() {
+        Rectangle r1 = new Rectangle(5);
+        assertThrows(IllegalArgumentException.class, () -> { r1.setHeight(0); }, "IllegalArgumentException error was expected.");
+    }
 }
