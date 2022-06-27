@@ -43,4 +43,13 @@ public class RectangleTest {
         Rectangle r1 = new Rectangle(5, 10);
         assertThrows(IllegalArgumentException.class, () -> { r1.setBase(-5); }, "IllegalArgumentException error was expected.");
     }
+
+    @Test
+    public void testHeightGreaterThanZero() {
+        Rectangle r1 = new Rectangle(5);
+        r1.setHeight(10);
+        double expectedResult = 10;
+        double doneResult = r1.getHeight();
+        assertEquals(expectedResult, doneResult, 0);
+    }
 }
