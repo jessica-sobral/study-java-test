@@ -19,4 +19,13 @@ public class SquareTest {
         double doneResult = s1.calculatePerimeter();
         assertEquals(expectedResult, doneResult, 0);
     }
+
+    @Test
+    public void testSideGreaterThanZero() {
+        Square s1 = new Square();
+        s1.setSide(5);
+        double expectedResult = 5;
+        double doneResult = s1.getSide();
+        assertEquals(expectedResult, doneResult, 0);
+    }
 }
