@@ -6,6 +6,15 @@ import org.junit.Test;
 
 public class AccountTest {
     @Test
+    public void testDepositGreaterThanZero() {
+        Account a1 = new Account(1, 150);
+        a1.deposit(100);
+        double expectedResult = 100;
+        double doneResult = a1.getBalance();
+        assertEquals(expectedResult, doneResult, 0);
+    }
+
+    @Test
     public void testIdGreaterThanZero() {
         Account a1 = new Account();
         a1.setId(1);
