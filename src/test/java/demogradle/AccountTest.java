@@ -101,6 +101,20 @@ public class AccountTest {
     }
 
     @Test
+    public void testTransferEqualsBalancePlusLimit() {
+        Account a1 = new Account(1, 150);
+        Account a2 = new Account(2, 150);
+        a1.deposit(100);
+        a1.transfer(a2, 250);
+        double expectedResultA1 = -150;
+        double doneResultA1 = a1.getBalance();
+        double expectedResultA2 = 250;
+        double doneResultA2 = a2.getBalance();
+        assertEquals(expectedResultA1, doneResultA1, 0);
+        assertEquals(expectedResultA2, doneResultA2, 0);
+    }
+
+    @Test
     public void testIdGreaterThanZero() {
         Account a1 = new Account();
         a1.setId(1);
