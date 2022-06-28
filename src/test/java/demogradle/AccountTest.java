@@ -33,11 +33,21 @@ public class AccountTest {
     }
 
     @Test
-    public void testCashOutGreaterThanZero() {
+    public void testCashOutGreaterThanBalance() {
         Account a1 = new Account(1, 150);
         a1.deposit(100);
         a1.cashOut(10);
         double expectedResult = 90;
+        double doneResult = a1.getBalance();
+        assertEquals(expectedResult, doneResult, 0);
+    }
+
+    @Test
+    public void testCashOutEqualsBalance() {
+        Account a1 = new Account(1, 150);
+        a1.deposit(100);
+        a1.cashOut(100);
+        double expectedResult = 0;
         double doneResult = a1.getBalance();
         assertEquals(expectedResult, doneResult, 0);
     }
