@@ -92,6 +92,20 @@ public class AccountTest {
     }
 
     @Test
+    public void testTransferGreaterThanBalance() {
+        Account a1 = new Account(1, 150);
+        Account a2 = new Account(2, 150);
+        a1.deposit(100);
+        a1.transfer(a2, 200);
+        double expectedResultA1 = -100;
+        double doneResultA1 = a1.getBalance();
+        double expectedResultA2 = 200;
+        double doneResultA2 = a2.getBalance();
+        assertEquals(expectedResultA1, doneResultA1, 0);
+        assertEquals(expectedResultA2, doneResultA2, 0);
+    }
+
+    @Test
     public void testTransferEqualToBalance() {
         Account a1 = new Account(1, 150);
         Account a2 = new Account(2, 150);
