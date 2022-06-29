@@ -82,6 +82,16 @@ public class AccountTest {
     }
 
     @Test
+    public void testCashOutLessThanBalancePlusLimit() {
+        Account a1 = new Account(1, 150);
+        a1.deposit(100);
+        a1.cashOut(300);
+        double expectedResult = 100;
+        double doneResult = a1.getBalance();
+        assertEquals(expectedResult, doneResult, 0);
+    }
+
+    @Test
     public void testTransferEqualToBalance() {
         Account a1 = new Account(1, 150);
         Account a2 = new Account(2, 150);
