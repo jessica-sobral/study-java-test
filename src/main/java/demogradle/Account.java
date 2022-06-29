@@ -15,7 +15,7 @@ public class Account {
     }
 
     public String checkBalance() {
-        return "\nAccount " + id + " has balance " + balance;
+        return "Account " + id + " has balance " + balance;
     }
 
     public boolean deposit(double value) {
